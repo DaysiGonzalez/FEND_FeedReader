@@ -72,6 +72,16 @@ $(function() {
           * clicked and does it hide when clicked again.
           */
           
+          it('menu visibility', function(){
+            //one click
+            $('.menu-icon-link').trigger('click');
+            expect(document.getElementsByTagName('body')[0].classList.contains('menu-hidden')).toBe(false);
+         
+            //second click
+            $('.menu-icon-link').trigger('click');
+            expect(document.getElementsByTagName('body')[0].classList.contains('menu-hidden')).toBe(true);
+         
+         })
     });
     /* TODO: Write a new test suite named "Initial Entries" */
 
