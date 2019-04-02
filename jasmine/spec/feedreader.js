@@ -36,7 +36,7 @@ $(function() {
                 expect(feed.url).toBeDefined();
                 expect(feed.url).not.toBe('');
             }
-         })
+         });
 
 
         /* TODO: Write a test that loops through each feed
@@ -48,7 +48,7 @@ $(function() {
                 expect(feed.name).toBeDefined();
                 expect(feed.name).not.toBe('');
             }
-         })
+         });
     });
 
 
@@ -64,7 +64,7 @@ $(function() {
 
          it('hidden menu', function(){
             expect(document.getElementsByTagName('body')[0].classList.contains('menu-hidden')).toBe(true);
-         })
+         });
 
          /* TODO: Write a test that ensures the menu changes
           * visibility when the menu icon is clicked. This test
@@ -81,7 +81,7 @@ $(function() {
             $('.menu-icon-link').trigger('click');
             expect(document.getElementsByTagName('body')[0].classList.contains('menu-hidden')).toBe(true);
          
-         })
+         });
     });
     /* TODO: Write a new test suite named "Initial Entries" */
 
@@ -95,12 +95,12 @@ $(function() {
          beforeEach(function (done){
             loadFeed(0, function(){
                 done();
-            })
-         })
+            });
+         });
 
          it('at least a single entry when loadFeed is done', function(){
             expect($('.entry .feed')).toBeDefined();
-         })
+         });
     });
 
 
@@ -116,16 +116,16 @@ $(function() {
             loadFeed(0, function(){
                 oldEntries = $('.feed').find(allFeeds.url);
                 done();
-            })
+            });
             loadFeed(1, function(){
                 newEntries = $('.feed').find(allFeeds.url);
                 done();
-            })
-         })
+            });
+         });
 
          it('new feed is loaded', function(){
             expect(oldEntries).not.toBe(newEntries);
-         })
+         });
 
     });
 }());
