@@ -99,7 +99,7 @@ $(function() {
          });
 
          it('at least a single entry when loadFeed is done', function(){
-            expect($('.entry .feed')).toBeDefined();
+            expect($('.feed .entry').length).not.toBe(0);
          });
     });
 
